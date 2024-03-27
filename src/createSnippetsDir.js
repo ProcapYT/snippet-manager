@@ -38,4 +38,4 @@ async function createSnippetsDir() {
   }
 }
 
-module.exports = { createSnippetsDir, snippetFolderPath };
+module.exports = { createSnippetsDir, snippetFolderPath, existsDir };

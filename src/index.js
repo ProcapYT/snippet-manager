@@ -4,6 +4,7 @@ const { join } = require("node:path");
 const {
   createSnippetsDir,
   snippetFolderPath,
+  existsDir,
 } = require("./createSnippetsDir.js");
 
 let mainWindow;
@@ -34,5 +35,16 @@ app.on("ready", async () => {
 });
 
 ipcMain.on("rendered", (event) => {
-  event.reply("snippetsFolderPath", snippetFolderPath);
+  const createdSnippetsPromise = new Promise((resolve) => {
+    const createdSnippetsInterval = setInterval(async () => {
+      if (await existsDir(snippetFolderPath)) {
+        resolve();
+        clearInterval(createdSnippetsInterval);
+      }
+    }, 100);
+  });
+
+  createdSnippetsPromise.then(() => {
+    event.reply("snippetsFolderPath", snippetFolderPath);
+  });
 });
