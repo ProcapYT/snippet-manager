@@ -1,5 +1,9 @@
 # Snippet Manager
 
+## About:
+
+It is a snippet manager for javascript and typescript files, a snippet is a small piece of code that you don't want to forget, like algorithms
+
 ## Install:
 
 You can install the snppet manager by going to the release part in the github repo
