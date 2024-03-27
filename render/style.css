@@ -39,6 +39,16 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: #555555;
+  color: #fff;
+}
+
+.noEditor h1 {
+  font-size: 60px;
+}
+
+.noEditor h2 {
+  margin-top: 50px;
 }
 
 .files {

@@ -35,6 +35,7 @@ function createEditor(fileContent, fileExtension) {
     cursorBlinking: "expand",
     fontFamily: "CascadiaCode",
     fontLigatures: true,
+    wordWrap: "on",
   });
 
   currentEditor.onDidChangeModelContent(resetSaveTimeout);
