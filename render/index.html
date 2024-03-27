@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Snippet Manager</title>
+  </head>
+  <body>
+    <div class="snippetEditor hidden"></div>
+    <div class="noEditor">
+      <h1>Snippet Manager</h1>
+      <h2>To edit a snippet just click it in the right</h2>
+    </div>
+
+    <div class="files">
+      <div class="header">
+        <h3 class="headerTitle">Snippet manager</h3>
+        <button class="createFileButton">
+          <i class="fa-solid fa-file-circle-plus"></i>
+        </button>
+      </div>
+      <div class="filesContainer"></div>
+    </div>
+
+    <form action="" class="createFileForm hidden">
+      <input type="text" class="createFileInput" placeholder="File name" />
+    </form>
+
+    <script src="./js/fontawesome.js"></script>
+    <script src="./js/main.js" type="module"></script>
+    <script type="module" src="./js/getLang.js"></script>
+    <script type="module" src="./js/getIcon.js"></script>
+  </body>
+</html>

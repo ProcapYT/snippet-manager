@@ -1,0 +1,170 @@
+@font-face {
+  font-family: "CascadiaCode";
+  src: url("fonts/CascadiaCode.ttf") format("truetype");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.snippetEditor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 80%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.noEditor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 80%;
+  height: 100%;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.files {
+  position: fixed;
+  width: 20%;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+
+.filesContainer {
+  position: absolute;
+  background-color: #333333;
+  width: 100%;
+  height: 95%;
+  bottom: 0;
+  right: 0;
+}
+
+.fileButton {
+  text-align: right;
+  height: auto;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fileButton:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.fileNamePar {
+  left: 3px;
+  color: #fff;
+  font-weight: bolder;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.fileIcon {
+  margin: 5px;
+}
+
+.deleteFileButton {
+  margin-right: 5px;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  height: 75%;
+  border-radius: 5px;
+  font-size: small;
+  z-index: 10000;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  height: 5%;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222222;
+  color: #fff;
+}
+
+.headerTitle {
+  margin-right: 5px;
+}
+
+.createFileButton {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: #fff;
+  height: 50%;
+  aspect-ratio: 1 / 1;
+}
+
+.createFileButton:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.deleteFileButton:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.createFileForm {
+  background-color: #444444;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  width: 20%;
+  height: 25%;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000000000;
+}
+
+.createFileInput {
+  color: #fff;
+  width: 80%;
+  height: 20%;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #555555;
+  outline: none;
+  border: none;
+}
+
+.createFileInput::placeholder {
+  color: #ddd;
+}
+
+.hidden {
+  display: none;
+}

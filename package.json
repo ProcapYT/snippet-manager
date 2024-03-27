@@ -1,0 +1,30 @@
+{
+  "name": "SnippetManager",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron .",
+    "build-linux": "electron-builder --linux"
+  },
+  "build": {
+    "linux": {
+      "target": [
+        "deb"
+      ],
+      "icon": "./assets/icon.icns"
+    }
+  },
+  "homepage": "none",
+  "author": {
+    "name": "Samuel Pedrera",
+    "email": "samuelpedrera7@gmail.com"
+  },
+  "devDependencies": {
+    "electron": "^29.1.5",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "monaco-editor": "^0.17.1",
+    "monaco-loader": "^1.0.0"
+  }
+}
